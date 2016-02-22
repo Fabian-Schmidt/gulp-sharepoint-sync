@@ -14,7 +14,7 @@ Supports three authentication methods:
 ```javascript
 var gulp = require( 'gulp' );
 var gutil = require( 'gulp-util' );
-var spSync = require( 'Fabian-Schmidt/gulp-sharepoint-sync' );
+var spSync = require( 'gulp-sharepoint-sync' );
 var inquirer = require('inquirer');
 
 var spSync_Connection;
@@ -54,7 +54,6 @@ gulp.task('uploadFiles', function() {
         //.pipe(watch(globs))
         .pipe( spSync_Connection.differentSize( '/images/public_html' ) ) // only upload newer files
         .pipe( spSync_Connection.dest( '/images/public_html' ) );
-    });
 });
 ```
 
@@ -80,7 +79,7 @@ gulp.task('uploadFiles', function() {
 ```javascript
 var gulp = require( 'gulp' );
 var gutil = require( 'gulp-util' );
-var spSync = require( 'Fabian-Schmidt/gulp-sharepoint-sync' );
+var spSync = require( 'gulp-sharepoint-sync' );
 
 gulp.task('deploy', function () {
     var conn = spSync.create({
@@ -106,7 +105,6 @@ gulp.task('deploy', function () {
         //.pipe(watch(globs))
         .pipe( conn.differentSize( '/images/public_html' ) ) // only upload newer files
         .pipe( conn.dest( '/images/public_html' ) );
-    });
 });
 ```
 
