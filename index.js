@@ -1,5 +1,5 @@
 'use strict';
-const assign = require('object-assign');
+var assign = require('object-assign');
 
 module.exports = SharePointSync;
 
