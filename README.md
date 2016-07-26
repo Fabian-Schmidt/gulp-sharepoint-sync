@@ -19,7 +19,7 @@ var inquirer = require('inquirer');
 
 var spSync_Connection;
 
-gulp.task('deploy', function (done) {
+gulp.task('default', function (done) {
     inquirer.prompt({
 		type: 'password',
 		name: 'pass',
@@ -81,7 +81,7 @@ var gulp = require( 'gulp' );
 var gutil = require( 'gulp-util' );
 var spSync = require( 'gulp-sharepoint-sync' );
 
-gulp.task('deploy', function () {
+gulp.task('default', function () {
     var conn = spSync.create({
         site:'https://foo.sharepoint.com/sites/bar/',
         authenticationMethod: 'ADAL',
